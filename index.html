@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengen-Rechner - Lerne mit Zahlen bis 100!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Mengen-Rechner 🌟</h1>
+            <p class="subtitle">Lerne Rechnen mit Mengen!</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Richtige Antworten:</span>
+                <span class="stat-value" id="correct">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Versuche:</span>
+                <span class="stat-value" id="total">0</span>
+            </div>
+        </div>
+
+        <div class="exercise-area">
+            <div class="task">
+                <h2 id="question">Lade...</h2>
+            </div>
+
+            <div class="visualization">
+                <div class="number-display">
+                    <h3>Erste Zahl</h3>
+                    <div id="visual1" class="visual-container"></div>
+                </div>
+                <div class="operator-display">
+                    <div id="operator" class="operator">+</div>
+                </div>
+                <div class="number-display">
+                    <h3>Zweite Zahl</h3>
+                    <div id="visual2" class="visual-container"></div>
+                </div>
+            </div>
+
+            <div class="answer-section">
+                <label for="answer">Deine Antwort:</label>
+                <input type="number" id="answer" min="0" max="100" placeholder="?" autofocus>
+                <button id="checkBtn" class="btn-primary">Prüfen ✓</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+
+            <button id="newTaskBtn" class="btn-secondary">Neue Aufgabe</button>
+        </div>
+
+        <div class="controls">
+            <h3>Schwierigkeit</h3>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active" data-level="easy">Leicht (bis 20)</button>
+                <button class="difficulty-btn" data-level="medium">Mittel (bis 50)</button>
+                <button class="difficulty-btn" data-level="hard">Schwer (bis 100)</button>
+            </div>
+            <div class="operation-toggle">
+                <label>
+                    <input type="checkbox" id="allowSubtraction" checked>
+                    Auch Minus-Aufgaben
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
