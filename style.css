@@ -101,7 +101,7 @@ h1 {
     padding: 20px;
     border-radius: 15px;
     min-height: 200px;
-    min-width: 250px;
+    min-width: 270px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -110,20 +110,29 @@ h1 {
 
 .tens-row {
     display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
 .ten-block {
-    width: 100px;
-    height: 35px;
+    width: 230px;
+    height: 25px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2em;
+    justify-content: flex-start;
+    padding: 0 2.5px;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.mini-dot {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .ones-row {

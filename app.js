@@ -130,7 +130,14 @@ function visualizeNumber(number, container) {
         for (let i = 0; i < tens; i++) {
             const tenBlock = document.createElement('div');
             tenBlock.className = 'ten-block';
-            tenBlock.textContent = '10';
+
+            // Add 10 small dots inside the ten-block
+            for (let j = 0; j < 10; j++) {
+                const miniDot = document.createElement('div');
+                miniDot.className = 'mini-dot';
+                tenBlock.appendChild(miniDot);
+            }
+
             tensRow.appendChild(tenBlock);
         }
 
